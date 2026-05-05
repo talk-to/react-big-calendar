@@ -4,7 +4,7 @@ import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 import clear from 'rollup-plugin-clear'
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
+// import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
@@ -48,7 +48,7 @@ export default [
       nodeResolve(),
       commonjs(commonjsOptions),
       babel(babelOptions),
-      sizeSnapshot(),
+      // sizeSnapshot(),
     ],
   },
 
@@ -71,7 +71,7 @@ export default [
       commonjs(commonjsOptions),
       babel(babelOptions),
       terser(),
-      sizeSnapshot(),
+      // sizeSnapshot(),
     ],
   },
 
@@ -89,7 +89,7 @@ export default [
         ...babelOptions,
         configFile: path.join(__dirname, 'babel.config.esm.js'),
       }),
-      sizeSnapshot(),
+      // sizeSnapshot(),
     ],
   },
 ]
